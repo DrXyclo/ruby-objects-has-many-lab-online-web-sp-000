@@ -22,9 +22,12 @@ class Artist
   end 
   
   def add_song_by_name(name)
+    binding.pry 
     song = Song.new(name)
+    binding.pry 
     @songs << song
     song.artist = self
+    binding.pry 
     
     @songs.each do |song|
       @@songs << song
@@ -44,7 +47,9 @@ class Artist
 end   
 =begin 
 
-=end 
+
+
+=end ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class Song
   attr_accessor :artist, :name
   
